@@ -61,10 +61,10 @@ plot(0, 0, type="n",
      xlim=c(-15, 0), ylim=c(-15, 0), lwd=8)
 
 axis(1, xlim=c(-15, 0), pos=-15, at=c(-15, -10, -5, 0), cex.axis=2, lwd=4)
-mtext(expression(psi[x50]~(MPa)),side=1,line=6.5, cex=5)
+mtext(expression(P[50]~(MPa)),side=1,line=6.5, cex=5)
 axis(2, ylim=c(-15, 0), pos=-15, at=c(-15, -10, -5, 0), cex.axis=2, lwd=4)
-mtext(expression(psi[xmin]~(MPa)),side=2,line=3, cex=5)
-abline(a=0, b=1, lwd=1, lty=3)
+mtext(expression(P[min]~(MPa)),side=2,line=3, cex=5)
+abline(a=0, b=1, lwd=3, lty=3)
 
 points(dataAng, type="p", col=Cols[1], pch=1, cex=3, lwd=3)
 lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=3)
@@ -76,7 +76,7 @@ points(res[3:4], type="l", col=Cols[4], lwd=8)
 points(res[5:6], type="l", col=Cols[5], lwd=8)
 
 legend("bottomright", legend=SA2, title=expression(beta), lty=c(1), col=Cols[3:5], cex=3, lwd=8, box.lwd=8)
-legend("bottomleft", title=expression(Choat~italic(et~al.)~2012), c("Angiosperm", "Gymnosperm"), pch=15, col=Cols[1:2], cex=3, box.lwd=8)
+legend("bottomleft", title=expression(Choat~italic(et~al.)~2012), c("Angiosperm", "Gymnosperm"), pch=15, col=Cols[1:2], cex=3, box.lwd=8, bg="white")
 box(lwd=8)
 
 dev.copy2pdf(file = "Figures/Choat et al 2012.pdf")

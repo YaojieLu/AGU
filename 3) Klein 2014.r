@@ -53,10 +53,10 @@ plot(0, 0, type="n",
      xlim=c(-10, 0), ylim=c(-10, 0), cex.lab=1.3, lwd=8)
 
 axis(1, xlim=c(-10, 0), pos=-10, cex.axis=2, lwd=4)
-mtext(expression(psi[x50]~(MPa)), side=1, line=6.5, cex=5)
+mtext(expression(P[50]~(MPa)), side=1, line=6.5, cex=5)
 axis(2, ylim=c(-10, 0), pos=-10, cex.axis=2, lwd=4)
-mtext(expression(psi[x50*", "*italic(g[s])]~(MPa)), side=2, line=2.8, cex=5)
-abline(a=0, b=1, lwd=1, lty=3)
+mtext(expression(P[50*", "*italic(g[s])]~(MPa)), side=2, line=2.8, cex=5)
+abline(a=0, b=1, lwd=3, lty=3)
 
 curve(0.49*x-0.42, -7, -1, lty=2, add=T, lwd=8)
 

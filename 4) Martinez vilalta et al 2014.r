@@ -55,14 +55,20 @@ plot(0, 0,
 points(data$P50, data$sigma, type="p", lwd=3, cex=3)
 lines(data$P50, predict(fit), lty=3, lwd=8)
 points(Psi50, Slope, type="l", cex=3, lwd=8)
+abline(h=1, lwd=3, lty=3)
 
 axis(1, xlim=c(-10, 0), pos=0.2, cex.axis=2, lwd=4)
-mtext(expression(psi[x50]~(MPa)),side=1,line=6.5, cex=5)
+mtext(expression(P[50]~(MPa)),side=1,line=6.5, cex=5)
 axis(2, ylim=c(0.2, 1.4), pos=-10, cex.axis=2, lwd=4)
 mtext(expression(Slope~of~psi[x]*(psi[s])), side=2, line=3, cex=5)
 
+segments(-8.9, 1, -8.9, 0.72, lwd=4)
+segments(-9.1, 1, -9.1, 0.72, lwd=4)
+text(-9, 1.04, expression(italic(anisohidric)), cex=2.5)
+text(-9, 0.66, expression(italic(isohidric)), cex=2.5)
+
 legend("bottomleft",
-       legend=expression(Martinez-vilalta~italic(et~al.)~2014, "Our model prediction"),
+       legend=expression(Martinez-Vilalta~italic(et~al.)~2014, "Our model prediction"),
        lty=c(3, 1), pch=c(1, NA), cex=3, lwd=6, box.lwd=8)
 box(lwd=8)
 
