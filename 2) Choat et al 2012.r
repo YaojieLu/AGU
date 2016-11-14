@@ -67,9 +67,9 @@ mtext(expression(P[min]~(MPa)),side=2,line=3, cex=5)
 abline(a=0, b=1, lwd=3, lty=3)
 
 points(dataAng, type="p", col=Cols[1], pch=1, cex=3, lwd=3)
-lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=3)
+lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=2)
 points(dataGym, type="p", col=Cols[2], pch=2, cex=3, lwd=3)
-lines(dataGym$Psi50, predict(fitGym), col=Cols[2], lwd=8, lty=3)
+lines(dataGym$Psi50, predict(fitGym), col=Cols[2], lwd=8, lty=2)
 
 points(res[1:2], type="l", col=Cols[3], lwd=8)
 points(res[3:4], type="l", col=Cols[4], lwd=8)

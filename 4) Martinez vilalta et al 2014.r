@@ -53,7 +53,7 @@ plot(0, 0,
      xlim=c(-10, 0), ylim=c(0.2, 1.4), lwd=8)
 
 points(data$P50, data$sigma, type="p", lwd=3, cex=3)
-lines(data$P50, predict(fit), lty=3, lwd=8)
+lines(data$P50, predict(fit), lty=2, lwd=8)
 points(Psi50, Slope, type="l", cex=3, lwd=8)
 abline(h=1, lwd=3, lty=3)
 
@@ -69,7 +69,7 @@ text(-9, 0.66, expression(italic(isohidric)), cex=2.5)
 
 legend("bottomleft",
        legend=expression(Martinez-Vilalta~italic(et~al.)~2014, "Our model prediction"),
-       lty=c(3, 1), pch=c(1, NA), cex=3, lwd=6, box.lwd=8)
+       lty=c(2, 1), pch=c(1, NA), cex=3, lwd=6, box.lwd=8)
 box(lwd=8)
 
 dev.copy2pdf(file = "Figures/Martinez vilalta et al 2014.pdf")
