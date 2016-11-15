@@ -66,17 +66,18 @@ axis(2, ylim=c(-15, 0), pos=-15, at=c(-15, -10, -5, 0), cex.axis=2, lwd=4)
 mtext(expression(P[min]~(MPa)),side=2,line=3, cex=5)
 abline(a=0, b=1, lwd=3, lty=3)
 
+points(res[1:2], type="l", col=Cols[3], lwd=8, lty=2)
+points(res[3:4], type="l", col=Cols[4], lwd=8, lty=2)
+points(res[5:6], type="l", col=Cols[5], lwd=8, lty=2)
+
 points(dataAng, type="p", col=Cols[1], pch=1, cex=3, lwd=3)
-lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=2)
+lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=1)
 points(dataGym, type="p", col=Cols[2], pch=2, cex=3, lwd=3)
-lines(dataGym$Psi50, predict(fitGym), col=Cols[2], lwd=8, lty=2)
+lines(dataGym$Psi50, predict(fitGym), col=Cols[2], lwd=8, lty=1)
 
-points(res[1:2], type="l", col=Cols[3], lwd=8)
-points(res[3:4], type="l", col=Cols[4], lwd=8)
-points(res[5:6], type="l", col=Cols[5], lwd=8)
-
-legend("bottomright", legend=SA2, title=expression(beta), lty=c(1), col=Cols[3:5], cex=3, lwd=8, box.lwd=8)
-legend("bottomleft", title=expression(Choat~italic(et~al.)~2012), c("Angiosperm", "Gymnosperm"), pch=15, col=Cols[1:2], cex=3, box.lwd=8, bg="white")
+legend("bottomright", legend=SA2, title=expression(beta), lty=c(2), col=Cols[3:5], cex=3, lwd=8, box.lwd=8)
+legend("bottomleft", title=expression(Choat~italic(et~al.)~2012), c("Angiosperm", "Gymnosperm"),
+       lty=1, pch=c(1, 2), col=Cols[1:2], cex=3, lwd=6, box.lwd=8, bg="white")
 box(lwd=8)
 
 dev.copy2pdf(file = "Figures/Choat et al 2012.pdf")

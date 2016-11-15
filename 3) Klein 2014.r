@@ -58,14 +58,14 @@ axis(2, ylim=c(-10, 0), pos=-10, cex.axis=2, lwd=4)
 mtext(expression(P[50*", "*italic(g[s])]~(MPa)), side=2, line=2.8, cex=5)
 abline(a=0, b=1, lwd=3, lty=3)
 
-points(data[1:2], type="l", col=Cols[2], lwd=8)
-points(data[3:4], type="l", col=Cols[3], lwd=8)
-points(data[5:6], type="l", col=Cols[4], lwd=8)
+points(data[1:2], type="l", col=Cols[2], lwd=8, lty=2)
+points(data[3:4], type="l", col=Cols[3], lwd=8, lty=2)
+points(data[5:6], type="l", col=Cols[4], lwd=8, lty=2)
 
-curve(0.49*x-0.42, -7, -1, lty=2, add=T, lwd=8)
+curve(0.49*x-0.42, -7, -1, lty=1, add=T, lwd=8)
 
-legend("bottomright", legend=SA2, title=expression(beta), lty=c(1), col=Cols[2:4], cex=3, lwd=8, box.lwd=8)
-legend("topleft", c("Klein 2014"), lty=c(2), col=Cols[1], cex=3, lwd=8, box.lwd=8)
+legend("bottomright", legend=SA2, title=expression(beta), lty=2, col=Cols[2:4], cex=3, lwd=8, box.lwd=8)
+legend("topleft", c("Klein 2014"), lty=1, col=Cols[1], cex=3, lwd=8, box.lwd=8)
 box(lwd=8)
 
 dev.copy2pdf(file = "Figures/Klein 2014.pdf")
