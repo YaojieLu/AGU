@@ -75,7 +75,7 @@ lines(dataAng$Psi50, predict(fitAng), col=Cols[1], lwd=8, lty=1)
 points(dataGym, type="p", col=Cols[2], pch=2, cex=3, lwd=3)
 lines(dataGym$Psi50, predict(fitGym), col=Cols[2], lwd=8, lty=1)
 
-legend("bottomright", legend=SA2, title=expression(With~beta*"="), lty=c(2), col=Cols[3:5], cex=3, lwd=8, box.lwd=8)
+legend("bottomright", legend=SA2, title=expression(With~beta*" ="), lty=c(2), col=Cols[3:5], cex=3, lwd=8, box.lwd=8)
 legend("bottomleft", title=expression(Choat~italic(et~al.)~2012), c("Angiosperm", "Gymnosperm"),
        lty=1, pch=c(1, 2), col=Cols[1:2], cex=3, lwd=6, box.lwd=8, bg="white")
 box(lwd=8)
