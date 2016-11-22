@@ -62,15 +62,18 @@ mtext(expression(P[50]~(MPa)),side=1,line=6.5, cex=5)
 axis(2, ylim=c(0.2, 1.4), pos=-10, cex.axis=2, lwd=4)
 mtext(expression(Slope~of~psi[x]*(psi[s])), side=2, line=3, cex=5)
 
-segments(-8.88, 1, -8.88, 0.72, lwd=4)
-segments(-9.08, 1, -9.08, 0.72, lwd=4)
-segments(-8.8, 1, -9.16, 1, lwd=4)
-text(-8.98, 1.04, expression(italic(anisohydric)), cex=2.5)
+#segments(-8.88, 1, -8.88, 0.72, lwd=4)
+#segments(-9.08, 1, -9.08, 0.72, lwd=4)
+#segments(-8.8, 1, -9.16, 1, lwd=4)
+text(-8.78, 1.04, expression(italic(anisohydric)), cex=2.5)
 text(-8.98, 0.65, expression(italic(isohydric)), cex=2.5)
-
-legend("bottomleft",
-       legend=expression(Martinez-Vilalta~italic(et~al.)~2014, "Our model prediction"),
-       lty=c(1, 2), pch=c(1, NA), cex=3, lwd=6, box.lwd=8)
+#abline(v=-9.74)
+legend("topleft",
+       legend=expression(Martinez-Vilalta~italic(et~al.)~2014),
+       lty=1, pch=1, cex=3, lwd=6, box.lwd=8, bg="white")
+legend("bottomright",
+       legend=expression(Our~model~prediction~with~beta==10~(see~box^2)),
+       lty=2, pch=NA, cex=3, lwd=6, box.lwd=8, bg="white")
 box(lwd=8)
 
 dev.copy2pdf(file = "Figures/Martinez vilalta et al 2014.pdf")
